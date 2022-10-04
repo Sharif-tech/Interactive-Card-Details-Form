@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;400;500&family=Space+Grotesk:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', cursive;
+  font-weight: 500px;
+  font-size: 18px;
+  max-width: 1440px;
+}
+
+.container {
+  max-width: 1440;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 95vh;
+}
+
+.card {
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  border-radius: 5px;
+  box-shadow: -1px 10px 36px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 10px 36px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 10px 36px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-front {
+  top: 22%;
+  right: -80px;
+  background: url('./images/bg-card-front.png') no-repeat center center/cover;
+}
+
+.card-front img {
+  width: 50px;
+  margin: 5% 10%;
+}
+
+.card-front .card-number {
+  margin: 10% auto;
+  text-align: center;
+}
+
+.card-front .card-bottom {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+
+.card-back {
+  bottom: 22%;
+  right: -150px;
+  background: url('./images/bg-card-back.png') no-repeat center center/cover;
+}
+
+.card-back .card-back-code{
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  bottom: 45%;
+  right: 30px;
+}
+
+.aside {
+  background: url('./images/bg-main-desktop.png') no-repeat center center / cover;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.main {
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+  /* margin-top: 70px; */
+  margin: 70px auto;
+  margin-right: 5px;
+}
+
+form {
+  width: 50%;
+  margin: 150px auto 0 auto;
+  padding: 20px;
+  font-size: 13px;
+}
+
+label {
+  margin-bottom: 5px;
+  line-height: 30px;
+  color:hsl(278, 68%, 11%);
+}
+
+input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: hsl(270, 3%, 87%) 1px solid;
+  outline: none;
+  padding: 8px;
+  width: 80%;
+  color:hsl(278, 68%, 11%);
+}
+
+
+
+input[type = text]:focus,
+input[type = number]:focus {
+  border: 1px solid hsl(278, 94%, 30%);
+}
+
+form .warning {
+  font-size: .6rem;
+  color: red;
+  /* display: none; */
+}
+
+form .expiry-details {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+form .expiry-details .date input {
+  width: 60px;
+  /* margin-right: 10px; */
+}
+
+form .expiry-details .cvc input {
+  width: 100%;
+  margin-right: 10px
+}
+
+.confirm {
+  width: 80%;
+  margin-top: 10px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.confirm:hover {
+  outline: hsl(278, 68%, 11%) solid .1px;
+  background-color: white;
+  color:hsl(278, 68%, 11%);
+}
+
+
+/* Success Page */
+.main-container {
+  display: none;
+  margin: 20% 20%;
+  line-height: 40px;
+  text-align: center;
+}
+
+.main-container p {
+  color: hsl(270, 3%, 87%);
+}
+
+/* Footer */
+.attribution { 
+  margin: 0 auto;
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* Media */
+
+@media (max-width: 800px) {
+
+  .container {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 0; 
+    height: 100vh;
+    margin-bottom: 50px;
+    padding: 0;
+    z-index: 10;
+  }
+  
+  .container .aside {
+    background: url('./images/bg-main-mobile.png') no-repeat center center / cover;
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    margin: 0;
+  }
+
+.card-front {
+  top: 50%;
+  left: 5%;
+  background: url('./images/bg-card-front.png') no-repeat center center/cover;
+  z-index: 1;
+}
+
+
+.card-back {
+  top: 12%;
+  right: 5%;
+  background: url('./images/bg-card-back.png') no-repeat center center/cover;
+}
+
+
+form {
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: 50px auto;
+  font-size: 13px;
+}
+
+label {
+  margin-bottom: 5px;
+  line-height: 30px;
+}
+
+input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: hsl(270, 3%, 87%) 1px solid;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+}
+
+form .expiry-details {
+  width: 100%;
+}
+
+form .expiry-details .date input {
+  width: 40%;
+}
+
+form .expiry-details .cvc input {
+  width: 100%;
+} 
+
+/* Success Page */
+.main-container {
+  line-height: 60px;
+}
+
+.confirm {
+  width: 100%;
+  padding: 20px;
+  border: none;
+}
+
+footer {
+  margin: 50px auto;
+}
+
+}

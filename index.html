@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Side Bar -->
+    <div class="aside">
+
+        <!-- Card Back -->
+        <div class="card card-front">
+          <div class="card-logo">
+            <img src="../images/card-logo.svg" alt="" srcset="">
+          </div>
+
+          <div class="card-number">
+            0000 0000 0000 0000
+          </div>
+
+          <div class="card-bottom">
+            <span class="bearer-name">RAYYAN MALTITI</span>
+            <span class="expiry-date">00/00</span>
+          </div>
+         </div>
+          
+         <!-- Card Back -->
+        <div class="card card-back">
+          <span class="card-back-code">000</span>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+      <form action="" id="form">
+
+        <label for="" id="me">
+          CARDHOLDER NAME
+        </label> <br>
+        <input type="text" id="user-name" placeholder="e.g. Rayyan Maltiti"> <br>
+        <div class="warning"></div>
+
+        <label for="">
+          CARD NUMBER
+        </label> <br>
+        <input type="text" id="card-number" placeholder="e.g. 1234 5678 9000 0000"> <br>
+        <div class="warning" id="warning"></div>
+
+        <div class="expiry-details">
+          <div class="date">
+            <label for="">
+              EXP. DATE (MM/YY)
+            </label> <br>
+            <input type="number" name="" id="month" placeholder="MM" class="month">
+            <input type="number" name="" id="year" placeholder="YY" class="year">
+            <div class="warning" id="warning"></div>
+          </div>
+
+          <div class="cvc">
+            <label for="">CVC</label> <br>
+            <input type="number" placeholder="e.g. 123" id="cvc">
+            <div class="warning" id="warning"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="confirm" id="confirm">Confirm</button>
+
+      </form>
+
+      <div class="main-container">
+        <img src="./images/icon-complete.svg" alt="" srcset="">
+        <h2>THANK YOU</h2>
+        <p>We've added your card details.</p>
+        <button class="confirm continue">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Negtech</a>.
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
